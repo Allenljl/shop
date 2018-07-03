@@ -106,6 +106,7 @@
 .goods_detail {
     padding: 0 10px;
     margin-top: 10px;
+    margin-bottom: 50px;
     background-color: #fff;
 }
 
