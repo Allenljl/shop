@@ -1,6 +1,7 @@
 {
     "pages": [
         "pages/index/index",
+        "pages/spdetail/spdetail",
         "pages/logs/logs",
         "pages/gouwu/gouwu",
         "pages/my/my"

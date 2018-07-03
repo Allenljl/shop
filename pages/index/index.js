@@ -62,6 +62,29 @@ Page({
                 "movieTitle": "11月20日话剧《风声》3",
                 "movieImage": "../../image/huaju.jpeg"
             },
+        ],
+        goodsList:[
+          {
+            "goodsId": 1,
+            "goodsImage":"../../image/test.jpg",
+            "goodsName":"木村耀司登山旅行大学生户外情侣双肩背包外带小背包",
+            "goodsAddress":"广州",
+            "goodsPrice":"99.0"
+          },
+          {
+            "goodsId": 1,
+            "goodsImage": "../../image/test.jpg",
+            "goodsName": "木村耀司登山旅行大学生户外情侣双肩背包外带小背包",
+            "goodsAddress": "广州",
+            "goodsPrice": "99.0"
+          },
+          {
+            "goodsId": 1,
+            "goodsImage": "../../image/test.jpg",
+            "goodsName": "木村耀司登山旅行大学生户外情侣双肩背包外带小背包",
+            "goodsAddress": "广州",
+            "goodsPrice": "99.0"
+          }
         ]
     },
 
