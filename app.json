@@ -1,9 +1,9 @@
 {
     "pages": [
         "pages/index/index",
+        "pages/car/car",
         "pages/spdetail/spdetail",
         "pages/logs/logs",
-        "pages/gouwu/gouwu",
         "pages/my/my"
     ],
     "window": {
@@ -31,7 +31,7 @@
                 "text": "活动"
             },
             {
-                "pagePath": "pages/gouwu/gouwu",
+                "pagePath": "pages/car/car",
                 "iconPath": "image/car1.png",
                 "selectedIconPath": "image/car.png",
                 "text": "购物车"

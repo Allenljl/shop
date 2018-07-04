@@ -67,21 +67,21 @@ Page({
           {
             "goodsId": 1,
             "goodsImage":"../../image/test.jpg",
-            "goodsName":"木村耀司登山旅行大学生户外情侣双肩背包外带小背包",
+            "goodsName":"木村耀司登山旅行大学生户外情侣双肩背包外带小背包1",
             "goodsAddress":"广州",
             "goodsPrice":"99.0"
           },
           {
             "goodsId": 1,
             "goodsImage": "../../image/test.jpg",
-            "goodsName": "木村耀司登山旅行大学生户外情侣双肩背包外带小背包",
+            "goodsName": "木村耀司登山旅行大学生户外情侣双肩背包外带小背包2",
             "goodsAddress": "广州",
             "goodsPrice": "99.0"
           },
           {
             "goodsId": 1,
             "goodsImage": "../../image/test.jpg",
-            "goodsName": "木村耀司登山旅行大学生户外情侣双肩背包外带小背包",
+            "goodsName": "木村耀司登山旅行大学生户外情侣双肩背包外带小背包3",
             "goodsAddress": "广州",
             "goodsPrice": "99.0"
           }
