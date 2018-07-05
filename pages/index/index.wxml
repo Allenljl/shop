@@ -13,9 +13,10 @@
         </swiper>
     </view>
 </view>
+<!-- 轮播图END -->
 
 <!-- 分类 -->
-<view class='category'>
+<view class='category clearfix'>
     <view class='category_item' wx:for="{{iconArray}}" wx:key="*this">
         <view class='icon_wrap'>
             <image src='{{item.iconUrl}}'></image>
@@ -37,7 +38,6 @@
         <image src='{{item.movieImage}}'></image>
     </view>
 </view>
-
 
 <view class='common_title'>
     <text>猜你喜欢</text>

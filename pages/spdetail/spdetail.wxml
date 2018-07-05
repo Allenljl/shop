@@ -6,7 +6,7 @@
             <block wx:for="{{image}}" wx:key="*this">
                 <swiper-item>
                     <view>
-                        <image src='{{item}}' class='swiper_image'></image>
+                        <image src='{{item}}' class='swiper_images'></image>
                     </view>
                 </swiper-item>
             </block>
@@ -79,25 +79,24 @@
 <view class='goods_detail'>
     <view class='goods_detail_title'>商品详情</view>
     <view>
-       <image src='../../image/IMG_0466.JPG' bindload='cusImageLoad' style='height:{{imageHeight}};width:{{imageWidth}};'></image>
+        <image src='{{goods[0].goodsDetails}}' bindload='cusImageLoad' style='height:{{imageHeight}};width:{{imageWidth}};'></image>
     </view>
 </view>
 
-
-<view class='goods_bottom_btn'>
+ <view class='goods_bottom_btn'>
     <view>
         <view class='goods_one'>
             <image src='../../image/car.png'></image>
-            <text class='goods_num'>0</text>    
+            <text class='goods_num'>{{num}}</text>    
         </view>
         <view class='goods_half red'>
             前往商城
         </view>
-        <view class='goods_half blue'>
+        <view class='goods_half blue' bindtap='getCarNum'>
             加入购物车
         </view>
         <view class='goods_half green'>
             前往付款
         </view>
     </view>
-</view>
+</view> 

@@ -5,12 +5,12 @@
     </view>
     <view class='car_item_title'>
         {{item.carName}}
-    </view>
+    </view> 
     <view class='car_item_bot clearfix'>
         <view class='car_item_price'>
             ￥{{item.carPrice}}
         </view>
-        <image class='car_item_del'  data-alpha-beta="{{index}}" src='../../image/shanchu.png'></image>
+        <image class='car_item_del' data-alpha-beta="{{index}}" src='../../image/shanchu.png'></image>
         <view class='car_item_operate'>
             <view class='car_item_reduce car_item_btn'>-</view>
             <text class='car_item_num'>{{item.carNum}}</text>
@@ -18,6 +18,8 @@
         </view>
     </view>
 </view>
+
+
 <view class='car_list_bot'>
     还差<text class="red">¥100.00</text>元包邮,前往凑单
     <image src='../../image/icon-arrow.png'></image>
@@ -26,6 +28,6 @@
 <view class='car_bot'>
     <view class='car_bot_wrap'>
         总价<text class='car_total_monay'> ￥169.00</text>
-        <view class='car_order_confirm'>下单</view>
+        <view class='car_order_confirm' bindtap='getPay'>下单</view>
     </view>
 </view>

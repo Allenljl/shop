@@ -16,10 +16,10 @@ Page({
         autoplay: true,
         interval: 2000,
         duration: 500,
-        iscollect: false,
+        num: 0,
         goods: [
             {
-                goodsId: 1,
+                goodsId: 3,
                 goodsName: "木村耀司登山旅行大学生户外情侣双肩背包外带小背包",
                 goodsImage: "../../image/test.jpg",
                 goodsImgs: [
@@ -44,78 +44,127 @@ Page({
                 goodsDetails: "../../image/IMG_0466.JPG"
             }
         ]
-
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
-        console.log(options.goods_id);
+    onLoad: function (options) {
+        this.setData({
+            num: wx.getStorageSync("GoodsCarList").length
+        })
     },
+
     /**
      * 控制图片大小缩放
      */
-    cusImageLoad: function(e) {
+    cusImageLoad: function (e) {
         var that = this;
         that.setData(WxAutoImage.wxAutoImageCal(e));
     },
+
     /**
      * 收藏功能
      */
-    collect: function() {
+    collect: function () {
+        // console.log(this.data.goods[0].iscollect);
         this.setData({
             "goods[0].iscollect": !this.data.goods[0].iscollect
-        })  
+        })
     },
 
+    /**
+     * 加入购物车
+     */
+
+    getCarNum: function () {
+
+        var CarData = {
+            goodsId: this.data.goods[0].goodsId,
+            carImage: this.data.goods[0].goodsImage,
+            carPrice: this.data.goods[0].goodsPrice,
+            carName: this.data.goods[0].goodsName,
+            carNum: 1,
+            carShow: true
+        };
+
+        // 1.判断是否数据
+        var GoodsCarList = wx.getStorageSync("GoodsCarList");
+        if (GoodsCarList) {
+            // 3.有数据，相同商品数据，数量加一
+            var isGoodsData = true;
+            console.log(isGoodsData);
+            for (var i = 0; i < GoodsCarList.length; i++) {
+                if (GoodsCarList[i].goodsId == this.data.goods[0].goodsId) {
+                    GoodsCarList[i].carNum += 1;
+                    isGoodsData = false;
+                }
+            }
+            // 4.有数据，数组追加数据
+            if (isGoodsData) {
+                GoodsCarList.push(CarData);
+                isGoodsData = true;
+            }
+            wx.setStorageSync("GoodsCarList", GoodsCarList);
+        } else {
+            // 2.没有数据，添加数据
+            wx.setStorageSync("GoodsCarList", [CarData]);
+        }
+
+        console.log(wx.getStorageSync("GoodsCarList"));
+
+
+        this.setData({
+            num: wx.getStorageSync("GoodsCarList").length
+        })
+    },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
+    onShow: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
+    onReachBottom: function () {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
+    onShareAppMessage: function () {
 
     }
 })

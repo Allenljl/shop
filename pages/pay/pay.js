@@ -1,36 +1,20 @@
-// pages/my/my.js
+// pages/pay/pay.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        mode: ["我的收藏", "我的订单", "我的地址", "联系客服", "关于我们"]
+
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        var that = this;
-        console.log(that)
-        console.log(options)
-        wx.login({
-            success: function(res) {
-                if (res.code) {
-                    wx.getUserInfo({
-                        success: function(res) {
-                            that.setData({
-                                userInfo: res.userInfo
-                            })
-                        }
-                    })
-                } else {
-                    console.log('登录失败！' + res.errMsg)
-                }
-            }
-        });
+
     },
+
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
